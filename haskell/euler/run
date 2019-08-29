@@ -1,0 +1,8 @@
+#!/bin/sh
+
+prog=${1%.*}
+echo $prog
+
+make $prog || exit
+./$prog
+make clean
