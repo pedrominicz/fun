@@ -9,9 +9,10 @@ removeFactor x y =
 
 primeFactors :: Integral a => a -> [a]
 primeFactors = primeFactors' primes
-  where primeFactors' (p:ps) x | x `mod` p == 0 = p : primeFactors' ps (removeFactor p x)
-                               | x > p          = primeFactors' ps x
-                               | otherwise      = []
+  where primeFactors' (p:ps) x
+          | x `mod` p == 0 = p : primeFactors' ps (removeFactor p x)
+          | x > p          = primeFactors' ps x
+          | otherwise      = []
         primeFactors' _ _ = undefined
 
 result :: Integer
