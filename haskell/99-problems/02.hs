@@ -6,5 +6,5 @@ myButLast (_:xs)  = myButLast xs
 
 main :: IO ()
 main = do
-  print $ myButLast "abcd"
-  print $ myButLast ['a'..'z']
+  print $ myButLast "xyz"
+  print $ myButLast "haskell"

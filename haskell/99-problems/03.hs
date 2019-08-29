@@ -1,4 +1,4 @@
-elementAt :: [a] -> Int -> Maybe a
+elementAt :: [a] -> Integer -> Maybe a
 elementAt [] _    = Nothing
 elementAt (x:_) 1 = Just x
 elementAt (_:xs) n
