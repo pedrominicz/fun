@@ -5,4 +5,4 @@ sumMultiples n | n `mod` 3 == 0 = n + sumMultiples (n - 1)
                | otherwise      = sumMultiples (n - 1)
 
 main :: IO ()
-main = print $ sumMultiples 999
+main = print $ sumMultiples (999 :: Integer)
