@@ -1,3 +1,4 @@
 #!/bin/sh
 
-ghci -Wall $1
+make clean >/dev/null
+ghci $1
