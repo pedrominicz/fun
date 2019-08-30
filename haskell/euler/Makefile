@@ -1,6 +1,5 @@
 SRC = $(wildcard *.hs)
-PROG = $(SRC:.hs=) 
-OTHER = $(SRC:.hs=.hi) $(SRC:.hs=.o)
+PROG = $(SRC:.hs=)
 
 all: $(PROG)
 
@@ -8,6 +7,6 @@ all: $(PROG)
 	ghc -o $@ $<
 
 clean:
-	rm -f $(PROG) $(OTHER)
+	rm -f $(PROG) $(wildcard *.hi) $(wildcard *.o)
 
 .PHONY: all clean
