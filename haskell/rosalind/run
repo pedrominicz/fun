@@ -1,0 +1,4 @@
+#!/bin/sh
+
+make clean >/dev/null
+ghci $1
