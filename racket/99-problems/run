@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Racket's repl/xrepl/top-level is utter garbage.
+
+expect <(
+cat <<EOF
+  spawn racket
+  send ",enter $1\n"
+  interact
+EOF
+)
