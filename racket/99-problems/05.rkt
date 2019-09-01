@@ -4,3 +4,5 @@
   (if (empty? a)
       empty
       (append (my-reverse (rest a)) (cons (first a) empty))))
+
+(provide my-reverse)

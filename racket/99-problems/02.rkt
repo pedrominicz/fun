@@ -4,3 +4,5 @@
   (if (<= (length a) 2)
       a
       (my-but-last (rest a))))
+
+(provide my-but-last)
