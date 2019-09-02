@@ -18,15 +18,6 @@ takeI n dd dr rr
         takeDR = \(p,l) -> (p * (dr / (dd + dr + rr)), DR:l)
         takeRR = \(p,l) -> (p * (rr / (dd + dr + rr)), RR:l)
 
-data Ball = Red | Blue
-  deriving Show
-
-test r b n
-  | n == 1 = [(r / (r+b), [Red]), (b / (r+b), [Blue])]
-  | n > 1  = map takeRed (test (r-1) b (n-1)) ++ map takeBlue (test r (b-1) (n-1))
-  where takeRed  = \(p,l) -> (p * (r / (r+b)), Red:l)
-        takeBlue = \(p,l) -> (p * (b / (r+b)), Blue:l)
-
 main = do
   [dd, dr, rr] <- map read . words <$> getLine
 
